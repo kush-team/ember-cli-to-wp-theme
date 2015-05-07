@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/kush-team/ember-cli-to-wp-theme.svg)](https://travis-ci.org/kush-team/ember-cli-to-wp-theme)
+
+
 # EmberCLI to Wordpress Theme
 
 Copy compiled index.html to index.php and replace assets path with wordpress theme url
