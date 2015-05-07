@@ -1,4 +1,4 @@
-module.exports = DS.Model.extend({
+export default  DS.Model.extend({
 	title: DS.attr(),
 	status: DS.attr(),
 	type: DS.attr(),

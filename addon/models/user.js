@@ -1,4 +1,4 @@
-module.exports = DS.Model.extend({
+export default DS.Model.extend({
 	username: DS.attr(),
 	name: DS.attr(),
 	first_name: DS.attr(),
