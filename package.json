@@ -2,7 +2,6 @@
   "name": "ember-cli-to-wp-theme",
   "version": "0.0.1",
   "description": "Copy compiled index.html to index.php and replace assets path with wordpress theme url",
-  "main": "index.js",
   "repository": "https://github.com/kush-team/ember-cli-to-wp-theme",
   "homepage": "https://github.com/kush-team/ember-cli-to-wp-theme",
   "directories": {
