@@ -22,5 +22,5 @@ export default  DS.Model.extend({
 	modified_gmt: DS.attr('date'),
 	featured_image: DS.attr(),
 	tags: DS.hasMany('tag'),
-	categories: DS.hasMany('category')
+	categories: DS.hasMany('term')
 });
