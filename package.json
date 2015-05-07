@@ -37,7 +37,8 @@
     "ember-cli-qunit": "0.3.10",
     "ember-cli-uglify": "1.0.1",
     "ember-disable-prototype-extensions": "^1.0.0",
-    "ember-export-application-global": "^1.0.2"
+    "ember-export-application-global": "^1.0.2",
+    "ember-try": "0.0.4"
   },
   "dependencies": {
     "broccoli-rename-files": "0.0.3",
