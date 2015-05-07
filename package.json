@@ -1,0 +1,36 @@
+{
+  "name": "ember-cli-html-to-wp-theme",
+  "version": "0.0.1",
+  "description": "Copy compiled index.html to index.php and replace assets path with wordpress theme url",
+  "main": "index.js",
+  "repository": "https://github.com/kush-team/ember-cli-to-wp-theme",
+  "homepage": "https://github.com/kush-team/ember-cli-to-wp-theme",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "ember server",
+    "build": "ember build",
+    "test": "ember try:testall"
+  },  
+  "keywords": [
+    "ember-addon"
+  ],
+  "ember-addon": {
+    "configPath": "tests/dummy/config"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },  
+  "author": "Kush Team",
+
+  "dependencies": {
+    "broccoli-rename-files": "0.0.3",
+    "object-assign": "^2.0.0",
+    "broccoli-merge-trees": "^0.2.1",
+    "broccoli-string-replace": "0.0.2",
+    "ember-data": "1.0.0-beta.15"
+  },
+  "license": "MIT"
+}
