@@ -44,7 +44,7 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
 
 	extractSingle: function(store, type, payload, id) {
 		var payloadTemp = {};
-		payloadTemp[type.typeKey] = [payload];
+		payloadTemp[type.typeKey] = payload;
 		return this._super(store, type, payloadTemp, id);
 	},	
 });
