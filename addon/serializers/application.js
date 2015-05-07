@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import Ember from 'ember';
 
 export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
 	
@@ -25,7 +26,7 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
 			extracted = [],
 			root = Ember.String.pluralize(type.typeKey);
 
-		payload.forEach(function(e, i){
+		payload.forEach(function(e){
 			if (e.terms) {
 				if ( typeof e.terms.post_tag !== 'undefined' ) {
 					e.tags = e.terms.post_tag;
