@@ -32,7 +32,7 @@ module.exports = {
                     return this.options.outputFilename;
                 }.bind(this)
             });
-
+/*
             aux = replace(aux, {
               files: [
                 'index.php' 
@@ -48,7 +48,7 @@ module.exports = {
                 }                
               ]
             });
-            
+  */          
             returnedTree = mergeTrees([tree, aux]);
         }
 

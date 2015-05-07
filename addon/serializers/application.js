@@ -13,7 +13,10 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
 		},
 		categories: {
 			embedded: 'always'
-		}
+		},
+		items: {
+			embedded: 'always'
+		}		
 	},
 
 	extractArray: function(store, type, payload) {
