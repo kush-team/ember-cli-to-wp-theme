@@ -4,7 +4,7 @@ var mergeTrees = require('broccoli-merge-trees');
 var replace = require('broccoli-string-replace');
 
 module.exports = {
-    name: 'ember-cli-html-to-wp-theme',
+    name: 'ember-cli-to-wp-theme',
 
     defaultOptions: {
         enabled: true,
