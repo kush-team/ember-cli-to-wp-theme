@@ -23,16 +23,17 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
 			root = Ember.String.pluralize(type.typeKey);
 
 		payload.forEach(function(e, i){
+			if (e.terms) {
+				if ( typeof e.terms.post_tag !== 'undefined' ) {
+					e.tags = e.terms.post_tag;
+				}
 
-			if ( typeof e.terms.post_tag !== 'undefined' ) {
-				e.tags = e.terms.post_tag;
+				if ( typeof e.terms.category !== 'undefined' ) {
+					e.categories = e.terms.category;
+				}
+
+				delete e.terms;
 			}
-
-			if ( typeof e.terms.category !== 'undefined' ) {
-				e.categories = e.terms.category;
-			}
-
-			delete e.terms;
 			extracted.push(e);
 		});
 
