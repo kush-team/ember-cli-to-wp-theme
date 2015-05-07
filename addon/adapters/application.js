@@ -7,6 +7,6 @@ export default DS.RESTAdapter.extend({
 	  if (type === 'category' ||  type === 'subcategory' || type === 'term')
 	   return 'taxonomies/category/terms';
 	  else
-	   this._super(type);
+	   return this._super(type);
 	}
 });

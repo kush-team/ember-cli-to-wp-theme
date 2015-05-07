@@ -19,7 +19,6 @@
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "defaultBlueprint": "ember-cli-to-wp-theme"
   },
   
   "engines": {
