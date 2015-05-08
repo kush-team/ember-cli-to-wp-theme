@@ -1,0 +1,6 @@
+{{#if isCustom}}
+	<a {{bind-attr href=item.url }} target="_blank">{{item.title}}</a>
+{{else}}
+	{{#link-to link item.object_id}} {{item.title}} {{/link-to}}
+{{/if}}
+

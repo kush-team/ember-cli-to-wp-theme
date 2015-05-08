@@ -11,7 +11,10 @@ Router.map(function() {
   });
   this.resource('term', function() {
   	this.route('show', {path: '/:term_id'});
-  });  
+  }); 
+  this.resource('page', function() {
+  	this.route('show', {path: '/:page_id'});
+  });    
 });
 
 export default Router;
