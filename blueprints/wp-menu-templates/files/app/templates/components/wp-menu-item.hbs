@@ -1,0 +1,13 @@
+{{#if isCustom}}
+	<a {{bind-attr href=item.url }} target="_blank">{{item.title}}</a>
+{{else}}
+	{{#link-to link item.object_id}} {{item.title}} {{/link-to}}
+{{/if}}
+
+{{#if item.subItems}}
+	<ul>
+	{{#each item.subItems as |menuItem|}}
+		{{wp-menu-item item=menuItem}}
+	{{/each}}
+	</ul>
+{{/if}}

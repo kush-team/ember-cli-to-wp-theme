@@ -1,0 +1,5 @@
+{{#each items as |menuItem|}}
+	{{#unless menuItem.parent}}
+		{{wp-menu-item item=menuItem}}
+	{{/unless}}
+{{/each}}

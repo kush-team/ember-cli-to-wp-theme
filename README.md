@@ -46,6 +46,17 @@ export default WPAdapter.extend({
 	namespace: 'your/name/space'
 });
 ```
+###Templates
+
+`ember generate wp-menu-templates`
+
+```
+installing
+  create app/templates/components/wp-menu-item.hbs
+  create app/templates/components/wp-menu.hbs
+
+```
+
 
 ## Development Setup
 
