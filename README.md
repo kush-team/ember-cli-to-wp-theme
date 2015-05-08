@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/kush-team/ember-cli-to-wp-theme.svg)](https://travis-ci.org/kush-team/ember-cli-to-wp-theme)
+[![Codacy Badge](https://www.codacy.com/project/badge/31a0e03e77cf4345a0f57ae7ad7451b9)](https://www.codacy.com/app/mbiondo/ember-cli-to-wp-theme)
 
 
 # EmberCLI to Wordpress Theme
