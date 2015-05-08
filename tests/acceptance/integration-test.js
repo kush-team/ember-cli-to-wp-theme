@@ -7,7 +7,6 @@ import {
 import startApp from '../helpers/start-app';
 
 let application;
-const { run } = Ember;
 
 module('Acceptance: Integration', {
   beforeEach() {

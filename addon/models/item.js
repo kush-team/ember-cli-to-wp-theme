@@ -2,7 +2,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({ 
 	order: DS.attr('number'), 
-	parent: DS.attr('number'), 
+	parent: DS.belongsTo('item', {async: true}), 
 	title: DS.attr('string'), 
 	url: DS.attr('string'), 
 	attr: DS.attr('string'), 
@@ -14,4 +14,5 @@ export default DS.Model.extend({
 	object: DS.attr('string'), 
 	type: DS.attr('string'), 
 	type_label: DS.attr('string'),
+	subItems: DS.hasMany('item', {inverse: 'parent'}),
 });

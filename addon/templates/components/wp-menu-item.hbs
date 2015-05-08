@@ -4,3 +4,10 @@
 	{{#link-to link item.object_id}} {{item.title}} {{/link-to}}
 {{/if}}
 
+{{#if item.subItems}}
+	<ul>
+	{{#each item.subItems as |menuItem|}}
+		{{wp-menu-item item=menuItem}}
+	{{/each}}
+	</ul>
+{{/if}}

@@ -20,8 +20,19 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
 		}		
 	},
 
-	extractArray: function(store, type, payload) {
 
+	normalizePayload: function(payload) {
+		if (payload.menu) {
+			payload.menu.items.forEach(function (item) {
+				if (item.parent === 0) {
+	    			delete item.parent;
+				}
+			});		
+		}
+    	return payload;
+  	},
+
+	extractArray: function(store, type, payload) {
 		var data = {},
 			extracted = [],
 			root = Ember.String.pluralize(type.typeKey);
