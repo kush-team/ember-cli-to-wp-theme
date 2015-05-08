@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-to-wp-theme",
   "version": "0.0.4",
-  "description": "Copy compiled index.html to index.php and replace assets path with wordpress theme url",
+  "description": "This project is intended as a basis for combining Ember as a frontend for a WordPress backend. You can use it as the starting point for a WordPress theme, or a completely standalone app that just retrieves data from WordPress.",
   "repository": "https://github.com/kush-team/ember-cli-to-wp-theme",
   "homepage": "https://github.com/kush-team/ember-cli-to-wp-theme",
   "directories": {
