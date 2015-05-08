@@ -4,13 +4,40 @@
 
 # EmberCLI to Wordpress Theme
 
-Copy compiled index.html to index.php and replace assets path with wordpress theme url
+This project is intended as a basis for combining Ember as a frontend for a WordPress backend. You can use it as the starting point for a WordPress theme, or a completely standalone app that just retrieves data from WordPress.
+
+## Background
+
+This project utilises two key developments from Ember and WordPress. Firstly the ability to write a custom adapter for Ember Data, in this case it is possible to use the `DS.RESTAdapter` as-is and simply extend `DS.RESTSerializer`.
+
+Secondly the [WP REST API](https://github.com/WP-API/WP-API) which is currently being developed as a plugin with a view to be be merged to core in the next major release (4.1).
 
 ## Usage
 
 `ember install:addon ember-cli-to-wp-theme`
 
-`ember generate ember-cli-to-wp-theme application`
+
+## Models
+```
+User
+Menu
+Item
+Post
+Page
+Tag
+Term
+```
+
+## Components
+```
+wp-menu
+wp-menu-item
+
+```
+
+After build `dist/index.html` will be copied to `dist/index.php` and replace assets path
+
+## Configuration
 
 app/adapters/application.js
 
@@ -21,20 +48,26 @@ export default WPAdapter.extend({
 	host: 'http://yourwordpres.org',
 	namespace: 'your/name/space'
 });
-
 ```
-After build `dist/index.html` will be copied to `dist/index.php` and replace assets path
 
-## Configuration
+## Development Setup
 
-```
-var app = new EmberApp({
-	htmlToWpTheme: {
-		/*
-		Default options are:
-			enabled: true,
-			outputFilename: 'index.php'
-		*/
-	}	
-})
+### Installation
+
+* `git clone` this repository
+* `npm install`
+* `bower install`
+
+### Running Tests
+
+* `ember try:testall`
+* `ember test`
+* `ember test --server`
+
+### Running the dummy app
+
+* `ember server`
+* Visit your app at http://localhost:4200.
+
+For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
 
