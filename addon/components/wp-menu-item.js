@@ -6,24 +6,29 @@ export default Ember.Component.extend({
   tagName: 'li',
   
   isCustom: Ember.computed('item' , function() {
-    return this.get('item').get('object') === 'custom';
+    if (this.get('item')) {
+      return this.get('item').get('object') === 'custom';
+    }
+    return false;
   }),
 
   link: Ember.computed('item' , function() {
   	var route = 'index';
-  	switch (this.get('item').get('object')) {
-  		case 'page':
-  			route = 'page.show';
-  			break;  			
-  		case 'post':
-  			route = 'post.show';
-  			break;  			
-  		case 'category':
-  			route = 'term.show';
-  			break;  			  			  			
-  		default:
-  			break;
-  	}
+    if (this.get('item')) {
+    	switch (this.get('item').get('object')) {
+    		case 'page':
+    			route = 'page.show';
+    			break;  			
+    		case 'post':
+    			route = 'post.show';
+    			break;  			
+    		case 'category':
+    			route = 'term.show';
+    			break;  			  			  			
+    		default:
+    			break;
+    	}
+    }
     return route;
   })
 });
