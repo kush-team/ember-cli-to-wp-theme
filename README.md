@@ -73,8 +73,8 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp({
    fingerprint: {
-    	exclude: ['screenshot.png', 'style.css'],
-   }	
+    	exclude: ['screenshot.png', '*.js', '*.css'],
+   }
 });
 ...
 ...

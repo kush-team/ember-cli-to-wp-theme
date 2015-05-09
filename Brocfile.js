@@ -4,7 +4,7 @@ var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 var app = new EmberAddon({
    fingerprint: {
-    	exclude: ['screenshot.png', 'style.css'],
+    	exclude: ['screenshot.png', 'style.css', '*.js', '*.css'],
    }	
 });
 
