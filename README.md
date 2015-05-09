@@ -46,7 +46,7 @@ export default WPAdapter.extend({
 	namespace: 'your/name/space'
 });
 ```
-###Templates
+### Code Generators
 
 `ember generate wp-menu-templates`
 
@@ -56,6 +56,30 @@ installing
   create app/templates/components/wp-menu.hbs
 
 ```
+
+`ember generate wp-theme-files`
+
+```
+installing
+  create public/screenshot.png
+  create public/style.css
+```
+
+Brocfile.js
+```
+/* global require, module */
+
+var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+
+var app = new EmberApp({
+   fingerprint: {
+    	exclude: ['screenshot.png', 'style.css'],
+   }	
+});
+...
+...
+```
+
 
 
 ## Development Setup
