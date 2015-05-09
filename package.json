@@ -41,12 +41,13 @@
     "ember-try": "0.0.4"
   },
   "dependencies": {
-    "broccoli-rename-files": "0.0.3",
-    "object-assign": "^2.0.0",
+    "broccoli-funnel": "^0.2.3",
     "broccoli-merge-trees": "^0.2.1",
+    "broccoli-rename-files": "0.0.3",
     "broccoli-string-replace": "0.0.2",
     "ember-cli-babel": "^5.0.0",
-    "ember-cli-htmlbars": "0.7.4"
+    "ember-cli-htmlbars": "0.7.4",
+    "object-assign": "^2.0.0"
   },
   "license": "MIT"
 }

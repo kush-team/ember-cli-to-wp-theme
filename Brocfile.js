@@ -2,7 +2,11 @@
 
 var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
-var app = new EmberAddon();
+var app = new EmberAddon({
+   fingerprint: {
+    	exclude: ['screenshot.png', 'style.css'],
+   }	
+});
 
 // Use `app.import` to add additional libraries to the generated
 // output files.

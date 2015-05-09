@@ -1,5 +1,6 @@
 var renameFiles = require('broccoli-rename-files');
 var assign = require('object-assign');
+var funnel = require('broccoli-funnel');
 var mergeTrees = require('broccoli-merge-trees');
 var replace = require('broccoli-string-replace');
 
@@ -22,33 +23,35 @@ module.exports = {
 
         if (this.options.enabled && type === 'all') {
             
-            aux = this.pickFiles(tree, {
+            aux = funnel(tree, {
                 srcDir: '.',
                 files: ['index.html'],
                 destDir: '.'
             });
+
             aux = renameFiles(aux, {
                 transformFilename: function() {
                     return this.options.outputFilename;
                 }.bind(this)
             });
-/*
+
             aux = replace(aux, {
               files: [
                 'index.php' 
               ],
               patterns: [
                 {
-                  match: /src="assets/g,
-                  replacement: 'src="<?php bloginfo(\'template_url\'); ?>/assets'
+                  match: /="assets/g,
+                  replacement: '="<?php bloginfo(\'template_url\'); ?>/assets'
                 },
                 {
-                  match: /href="assets/g,
-                  replacement: 'src="<?php bloginfo(\'template_url\'); ?>/assets'
+                  match: /<title>.*?<\/title>/g,
+                  replacement: "<title><?php wp_title( '|', true, 'right' ); ?></title>"
                 }                
+
               ]
             });
-  */          
+        
             returnedTree = mergeTrees([tree, aux]);
         }
 
