@@ -73,12 +73,18 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp({
    fingerprint: {
-    	exclude: ['screenshot.png', '*.js', '*.css'],
+    	exclude: ['screenshot.png', 'style.css'],
    }
 });
 ...
 ...
 ```
+
+
+### TO-DO
+- [ ] Command for package: ember wp:package
+- [ ] Support for comments
+- [ ] Wordpress theme configuration
 
 
 

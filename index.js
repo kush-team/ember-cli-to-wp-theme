@@ -46,7 +46,7 @@ module.exports = {
                 },
                 {
                   match: /<title>.*?<\/title>/g,
-                  replacement: "<title><?php wp_title( '|', true, 'right' ); ?></title>"
+                  replacement: "<title><?php bloginfo('name'); ?></title>"
                 }                
 
               ]
