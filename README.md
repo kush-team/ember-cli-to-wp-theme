@@ -11,8 +11,17 @@ Secondly the [WP REST API](https://github.com/WP-API/WP-API) which is currently 
 
 ## Usage
 
-`ember install:addon ember-cli-to-wp-theme`
+For ember-cli >= 0.2.3, run:
 
+```bash
+ember install ember-cli-to-wp-theme
+```
+
+Otherwise, for ember-cli 0.1.5 - 0.2.2, run:
+
+```bash
+ember install:addon ember-cli-to-wp-theme`
+```
 
 ## Models
 ```
