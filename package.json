@@ -41,6 +41,8 @@
     "ember-try": "0.0.4"
   },
   "dependencies": {
+    "chalk": "^1.0.0",
+    "rsvp": "^3.0.18",
     "broccoli-funnel": "^0.2.3",
     "broccoli-merge-trees": "^0.2.1",
     "broccoli-rename-files": "0.0.3",

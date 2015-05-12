@@ -6,21 +6,26 @@ var replace = require('broccoli-string-replace');
 
 module.exports = {
     name: 'ember-cli-to-wp-theme',
-
     defaultOptions: {
-        enabled: true,
         outputFilename: 'index.php'
     },
 
     included: function(app) {
-        this._super.included.apply(this, arguments);
-        this.options = assign({}, this.defaultOptions, (app.options.htmlToWpTheme || {}));
+        this.options = assign({}, this.defaultOptions, (app.options.wpTheme || {}));
+        if (process.argv[2] === 'wp:package') {
+          this.options.enabled = true;
+          app.options.fingerprint.enabled = false;
+        } 
+    },
+
+    includedCommands: function() {
+        var commands = require('./lib/commands');
+        return commands;
     },
 
     postprocessTree: function(type, tree) {
         var returnedTree = tree,
             aux;
-
         if (this.options.enabled && type === 'all') {
             
             aux = funnel(tree, {
@@ -56,5 +61,5 @@ module.exports = {
         }
 
         return returnedTree;
-    }
+    }    
 };
