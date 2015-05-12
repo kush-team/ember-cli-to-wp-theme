@@ -20,7 +20,7 @@ ember install ember-cli-to-wp-theme
 Otherwise, for ember-cli 0.1.5 - 0.2.2, run:
 
 ```bash
-ember install:addon ember-cli-to-wp-theme`
+ember install:addon ember-cli-to-wp-theme
 ```
 
 ## Models
@@ -56,17 +56,19 @@ export default WPAdapter.extend({
 });
 ```
 ### Code Generators
-
-`ember generate wp-menu-templates`
+```bash
+ember generate wp-menu-templates
+```
 
 ```
 installing
   create app/templates/components/wp-menu-item.hbs
   create app/templates/components/wp-menu.hbs
-
 ```
 
-`ember generate wp-theme-files`
+```bash
+ember generate wp-theme-files
+```
 
 ```
 installing
@@ -81,17 +83,20 @@ Brocfile.js
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp({
-   fingerprint: {
-    	exclude: ['screenshot.png', 'style.css'],
-   }
+   fingerprint: { }
 });
 ...
 ...
 ```
 
+### Package
+
+```bash
+ember wp:package --prod
+```
 
 ### TO-DO
-- [ ] Command for package: ember wp:package
+- [X] Command for package: ember wp:package
 - [ ] Support for comments
 - [ ] Wordpress theme configuration
 
